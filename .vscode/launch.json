@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DD Autopilot (Debug, 20 min)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/dd_library_autopilot.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--max-minutes",
+        "20",
+        "--verbose"
+      ]
+    }
+  ]
+}

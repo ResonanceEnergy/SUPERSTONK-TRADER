@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install (pip)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Autopilot (20 min)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python.exe dd_library_autopilot.py --max-minutes 20",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Hub Refresh (20 min)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python.exe dd_library_autopilot.py --recrawl-hubs --max-minutes 20",
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Weekly Report + Diff (7d)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python.exe dd_reporter.py --days 7 --diff",
+      "problemMatcher": []
+    },
+    {
+      "label": "Export Project ZIP",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python.exe export_project_zip.py",
+      "problemMatcher": []
+    }
+  ]
+}
